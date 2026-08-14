@@ -3,30 +3,24 @@ programa
 	
 	funcao inicio()
 	{
-		inteiro num1, num2 = 0
-
-		escreva("Coloque: ")
-		leia(num1)
-		
-		se(num1 < 0)
+		inteiro Ant1 = 1
+		inteiro Ant2 = 0
+		inteiro sum = 0
+		inteiro nmax
+		leia(nmax)
+		se(nmax < 0)
 		{
-			escreva("Nao tem num neg na ordem do fibos")
+			escreva("Opa opa opa, tem isso ai nao")
 			retorne
 		}
-			senao se(num1 == 0)
-			{
-				escreva("Sum: " , 1)
-				retorne
-			}
 
-		num2 = num1
-
-		para(inteiro i = 1 ; i < num1 ; i++)
+		para(inteiro i=0; sum < nmax ; i++)
 		{
-			num2 *= (num1 - i)
+			sum = Ant1+Ant2
+			Ant2 = Ant1
+			Ant1 = sum
+
+			escreva( sum , " - " )
 		}
-		
-		escreva("Sum: ", num2)
-		
 	}
 }
